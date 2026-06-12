@@ -71,7 +71,7 @@ export default function AboutSection() {
                 }}
               >
                 <span
-                  className="text-[8px] font-pixel text-[#FFF9F0]"
+                  className="text-[10px] font-pixel text-[#FFF9F0]"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   ─── CHARACTER PROFILE ───
@@ -120,7 +120,7 @@ export default function AboutSection() {
                   <span className="text-base flex-shrink-0">{icon}</span>
                   <div className="min-w-0">
                     <div
-                      className="text-[6px] font-pixel text-[var(--text-muted)] mb-0.5"
+                      className="text-[10px] font-pixel text-[var(--text-muted)] mb-0.5"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                     >
                       {label}
@@ -138,7 +138,7 @@ export default function AboutSection() {
               {/* Interests */}
               <div className="mt-4">
                 <div
-                  className="text-[6px] font-pixel text-[var(--text-muted)] mb-2"
+                  className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   ♦ INTERESTS
@@ -147,7 +147,7 @@ export default function AboutSection() {
                   {profile.interests.map((interest) => (
                     <span
                       key={interest}
-                      className="text-[8px] px-2 py-1"
+                      className="text-[10px] px-2 py-1"
                       style={{
                         background: "var(--bg-secondary)",
                         border: "2px solid var(--border-color)",
@@ -182,7 +182,7 @@ export default function AboutSection() {
             >
               <span className="text-lg">🧙‍♂️</span>
               <span
-                className="text-[7px] font-pixel text-[var(--text-secondary)]"
+                className="text-[10px] font-pixel text-[var(--text-secondary)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 Villager Didi says...
@@ -203,7 +203,7 @@ export default function AboutSection() {
             <div className="flex items-center gap-3">
               <button
                 onClick={nextDialogue}
-                className="px-4 py-2 text-[8px] font-pixel cursor-pointer"
+                className="px-4 py-2 text-[10px] font-pixel cursor-pointer"
                 style={{
                   fontFamily: "'Press Start 2P', monospace",
                   background: "var(--accent-secondary)",
@@ -231,7 +231,7 @@ export default function AboutSection() {
               </div>
 
               <span
-                className="text-[7px] font-pixel text-[var(--text-muted)]"
+                className="text-[10px] font-pixel text-[var(--text-muted)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 {dialogueIdx + 1}/{DIALOGUES.length}
@@ -244,7 +244,7 @@ export default function AboutSection() {
                 <span className="text-2xl flex-shrink-0">🎯</span>
                 <div>
                   <div
-                    className="text-[7px] font-pixel text-[var(--accent-primary)] mb-2"
+                    className="text-[10px] font-pixel text-[var(--accent-primary)] mb-2"
                     style={{ fontFamily: "'Press Start 2P', monospace" }}
                   >
                     QUEST OBJECTIVE

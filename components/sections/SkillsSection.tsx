@@ -74,7 +74,7 @@ export default function SkillsSection() {
               }}
             >
               <span
-                className="text-[8px] font-pixel text-[#AA66CC]"
+                className="text-[10px] font-pixel text-[#AA66CC]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 ── STATUS ──
@@ -110,7 +110,7 @@ export default function SkillsSection() {
                     <span className="text-xl flex-shrink-0">{categoryIcons[cat]}</span>
                     <div className="flex-1 min-w-0">
                       <div
-                        className="text-[8px] font-pixel mb-1"
+                        className="text-[10px] font-pixel mb-1"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           color: activeCategory === cat ? "#AA66CC" : "#A89EC0",
@@ -131,7 +131,7 @@ export default function SkillsSection() {
                       </div>
                     </div>
                     <span
-                      className="text-[7px] font-pixel flex-shrink-0"
+                      className="text-[10px] font-pixel flex-shrink-0"
                       style={{
                         fontFamily: "'Press Start 2P', monospace",
                         color: activeCategory === cat ? "#FFD700" : "#6B6090",
@@ -154,7 +154,7 @@ export default function SkillsSection() {
               }}
             >
               <div
-                className="text-[7px] font-pixel text-[#AA66CC] mb-3"
+                className="text-[10px] font-pixel text-[#AA66CC] mb-3"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 ── BATTLE STATS ──
@@ -168,7 +168,7 @@ export default function SkillsSection() {
               ].map(({ label, value, color }) => (
                 <div key={label} className="flex items-center gap-2 mb-2">
                   <span
-                    className="text-[7px] font-pixel w-6 flex-shrink-0"
+                    className="text-[10px] font-pixel w-8 flex-shrink-0"
                     style={{ fontFamily: "'Press Start 2P', monospace", color }}
                   >
                     {label}
@@ -177,7 +177,7 @@ export default function SkillsSection() {
                     <div style={{ width: `${value}%`, height: "100%", background: color, transition: "width 1s ease" }} />
                   </div>
                   <span
-                    className="text-[6px] font-pixel flex-shrink-0"
+                    className="text-[10px] font-pixel flex-shrink-0"
                     style={{ fontFamily: "'Press Start 2P', monospace", color: "#6B6090" }}
                   >
                     {value}
@@ -205,13 +205,13 @@ export default function SkillsSection() {
               }}
             >
               <span
-                className="text-[8px] font-pixel text-[var(--warm-white)]"
+                className="text-[10px] font-pixel text-[var(--warm-white)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 {categoryIcons[activeCategory]} {activeCategory} Skills
               </span>
               <span
-                className="text-[7px] font-pixel text-[var(--accent-secondary)]"
+                className="text-[10px] font-pixel text-[var(--accent-secondary)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 Avg: {avgXP}%
@@ -251,7 +251,7 @@ export default function SkillsSection() {
                   <div key={label} className="flex items-center gap-1">
                     <div className="w-3 h-3 border border-[var(--border-color)]" style={{ background: colors[i] }} />
                     <span
-                      className="text-[7px] font-pixel text-[var(--text-muted)]"
+                      className="text-[10px] font-pixel text-[var(--text-muted)]"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                     >
                       {label}

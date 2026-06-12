@@ -64,13 +64,13 @@ export default function Navbar() {
             <span className="text-xl animate-bounce-pixel" style={{ imageRendering: "pixelated" }}>🗺️</span>
             <div className="hidden sm:block">
               <div
-                className="text-[7px] font-pixel text-[var(--accent-secondary)]"
+                className="text-[10px] font-pixel text-[var(--accent-secondary)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 📍 {activeLink?.location || "Village Entrance"}
               </div>
               <div
-                className="text-[9px] font-pixel text-[var(--text-primary)] mt-0.5"
+                className="text-[10px] font-pixel text-[var(--text-primary)] mt-0.5"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 Didi&apos;s Village
@@ -88,10 +88,10 @@ export default function Navbar() {
                 aria-label={`Navigate to ${link.label}`}
               >
                 <span
-                  className="text-[8px] font-pixel flex items-center gap-1 transition-colors"
+                  className="text-[14px] font-pixel flex items-center gap-1 transition-colors"
                   style={{
                     fontFamily: "'Press Start 2P', monospace",
-                    color: activeSection === link.id ? "var(--accent-secondary)" : "var(--text-secondary)",
+                    color: activeSection === link.id ? "var(--accent-secondary)" : isDay ? "#000000" : "#ffffff",
                   }}
                 >
                   <span>{link.icon}</span>
@@ -169,7 +169,7 @@ export default function Navbar() {
                 <span className="text-xl">{link.icon}</span>
                 <div>
                   <div
-                    className="text-[8px] font-pixel"
+                    className="text-[10px] font-pixel"
                     style={{
                       fontFamily: "'Press Start 2P', monospace",
                       color: activeSection === link.id ? "var(--accent-secondary)" : "var(--text-primary)",
@@ -178,7 +178,7 @@ export default function Navbar() {
                     {link.label}
                   </div>
                   <div
-                    className="text-[7px] text-[var(--text-muted)]"
+                    className="text-[10px] text-[var(--text-muted)]"
                     style={{ fontFamily: "'Press Start 2P', monospace" }}
                   >
                     {link.location}

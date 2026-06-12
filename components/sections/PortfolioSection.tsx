@@ -13,6 +13,7 @@ type Filter = ProjectCategory | typeof ALL;
 export default function PortfolioSection() {
   const [filter, setFilter] = useState<Filter>(ALL);
   const [selected, setSelected] = useState<(typeof projects)[0] | null>(null);
+  const [activeLightboxImage, setActiveLightboxImage] = useState<string | null>(null);
 
   const filtered =
     filter === ALL ? projects : projects.filter((p) => p.category === filter);
@@ -57,7 +58,7 @@ export default function PortfolioSection() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className="px-3 py-2 transition-all duration-150 text-[8px]"
+              className="px-3 py-2 transition-all duration-150 text-[10px]"
               style={{
                 fontFamily: "'Press Start 2P', monospace",
                 background: filter === cat ? "var(--accent-secondary)" : "var(--bg-secondary)",
@@ -105,7 +106,7 @@ export default function PortfolioSection() {
                     {/* Overlay with difficulty */}
                     <div className="absolute top-2 right-2">
                       <span
-                        className="text-[7px] font-pixel px-2 py-1"
+                        className="text-[10px] font-pixel px-2 py-1"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           background: difficultyColors[project.difficulty],
@@ -118,7 +119,7 @@ export default function PortfolioSection() {
                     </div>
                     <div className="absolute top-2 left-2">
                       <span
-                        className="text-[7px] font-pixel px-2 py-1"
+                        className="text-[10px] font-pixel px-2 py-1"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           background: "rgba(0,0,0,0.7)",
@@ -135,7 +136,7 @@ export default function PortfolioSection() {
                     {/* Category badge */}
                     <div className="mb-2">
                       <span
-                        className="text-[6px] font-pixel px-2 py-1"
+                        className="text-[10px] font-pixel px-2 py-1"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           background: "var(--bg-secondary)",
@@ -168,7 +169,7 @@ export default function PortfolioSection() {
                       {project.tech.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
-                          className="text-[6px] font-pixel px-1 py-0.5"
+                          className="text-[10px] font-pixel px-1 py-0.5"
                           style={{
                             fontFamily: "'Press Start 2P', monospace",
                             background: "#1A1A2E",
@@ -181,7 +182,7 @@ export default function PortfolioSection() {
                       ))}
                       {project.tech.length > 4 && (
                         <span
-                          className="text-[6px] font-pixel px-1 py-0.5"
+                          className="text-[10px] font-pixel px-1 py-0.5"
                           style={{ fontFamily: "'Press Start 2P', monospace", color: "var(--text-muted)" }}
                         >
                           +{project.tech.length - 4}
@@ -192,7 +193,7 @@ export default function PortfolioSection() {
                     {/* Status */}
                     <div className="flex items-center justify-between">
                       <span
-                        className="text-[6px] font-pixel"
+                        className="text-[10px] font-pixel"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           color: project.status === "Completed" ? "#00C851" : project.status === "In Progress" ? "#FFBB33" : "#33B5E5",
@@ -201,7 +202,7 @@ export default function PortfolioSection() {
                         ● {project.status}
                       </span>
                       <span
-                        className="text-[7px] font-pixel text-[var(--accent-secondary)] cursor-pointer hover:underline"
+                        className="text-[10px] font-pixel text-[var(--accent-secondary)] cursor-pointer hover:underline"
                         style={{ fontFamily: "'Press Start 2P', monospace" }}
                       >
                         View →
@@ -247,7 +248,7 @@ export default function PortfolioSection() {
                 }}
               >
                 <span
-                  className="text-[9px] font-pixel text-[#FFF9F0]"
+                  className="text-[10px] font-pixel text-[#FFF9F0]"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   📜 Quest Details
@@ -262,17 +263,6 @@ export default function PortfolioSection() {
               </div>
 
               <div className="p-6 space-y-4">
-                {/* Thumbnail */}
-                <div className="relative h-40 w-full overflow-hidden" style={{ border: "3px solid var(--border-color)" }}>
-                  <Image
-                    src={selected.thumbnail}
-                    alt={selected.title}
-                    fill
-                    className="object-cover"
-                    style={{ imageRendering: "pixelated" }}
-                  />
-                </div>
-
                 <h3
                   className="text-sm font-pixel text-[var(--text-primary)]"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
@@ -282,7 +272,7 @@ export default function PortfolioSection() {
 
                 <div className="flex gap-3 flex-wrap">
                   <span
-                    className="text-[7px] font-pixel px-2 py-1"
+                    className="text-[10px] font-pixel px-2 py-1"
                     style={{
                       fontFamily: "'Press Start 2P', monospace",
                       background: difficultyColors[selected.difficulty],
@@ -292,7 +282,7 @@ export default function PortfolioSection() {
                     {selected.difficulty}
                   </span>
                   <span
-                    className="text-[7px] font-pixel px-2 py-1"
+                    className="text-[10px] font-pixel px-2 py-1"
                     style={{
                       fontFamily: "'Press Start 2P', monospace",
                       background: "var(--bg-secondary)",
@@ -303,7 +293,7 @@ export default function PortfolioSection() {
                     {selected.category}
                   </span>
                   <span
-                    className="text-[7px] font-pixel px-2 py-1"
+                    className="text-[10px] font-pixel px-2 py-1"
                     style={{
                       fontFamily: "'Press Start 2P', monospace",
                       color: selected.status === "Completed" ? "#00C851" : "#FFBB33",
@@ -320,9 +310,41 @@ export default function PortfolioSection() {
                   {selected.longDescription}
                 </p>
 
+                {selected.images && selected.images.length > 0 && (
+                  <div>
+                    <div
+                      className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
+                      style={{ fontFamily: "'Press Start 2P', monospace" }}
+                    >
+                      PREVIEW GALLERY (CLICK TO ENLARGE):
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {selected.images.map((img, index) => (
+                        <div
+                          key={index}
+                          className="relative h-40 w-full overflow-hidden cursor-zoom-in hover:opacity-90 active:scale-[0.98] transition-all"
+                          style={{
+                            border: "3px solid var(--border-color)",
+                            boxShadow: "4px 4px 0 var(--shadow-color)",
+                          }}
+                          onClick={() => setActiveLightboxImage(img)}
+                        >
+                          <Image
+                            src={img}
+                            alt={`${selected.title} preview ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            style={{ imageRendering: "pixelated" }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div>
                   <div
-                    className="text-[7px] font-pixel text-[var(--text-muted)] mb-2"
+                    className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
                     style={{ fontFamily: "'Press Start 2P', monospace" }}
                   >
                     TECHNOLOGIES:
@@ -331,7 +353,7 @@ export default function PortfolioSection() {
                     {selected.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-[7px] font-pixel px-2 py-1"
+                        className="text-[10px] font-pixel px-2 py-1"
                         style={{
                           fontFamily: "'Press Start 2P', monospace",
                           background: "#1A1A2E",
@@ -359,6 +381,51 @@ export default function PortfolioSection() {
                   <PixelButton onClick={() => setSelected(null)} variant="ghost" size="sm">
                     ✕ Close
                   </PixelButton>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Image Lightbox Modal */}
+      <AnimatePresence>
+        {activeLightboxImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/90 cursor-zoom-out"
+            onClick={() => setActiveLightboxImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative max-w-4xl max-h-[85vh] w-full h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-full flex items-center justify-center p-2" style={{
+                background: "var(--panel-bg)",
+                border: "6px solid var(--border-dark)",
+                boxShadow: "10px 10px 0 rgba(0,0,0,0.7)",
+              }}>
+                <button
+                  onClick={() => setActiveLightboxImage(null)}
+                  className="absolute top-2 right-2 z-10 text-white hover:text-red-400 transition-colors text-[10px] font-pixel px-2 py-1 bg-black/50"
+                  style={{ fontFamily: "'Press Start 2P', monospace", border: "2px solid var(--border-color)" }}
+                  aria-label="Close image preview"
+                >
+                  ✕ CLOSE
+                </button>
+                <div className="relative w-full h-full max-h-[75vh]">
+                  <Image
+                    src={activeLightboxImage}
+                    alt="Enlarged preview"
+                    fill
+                    className="object-contain"
+                    style={{ imageRendering: "pixelated" }}
+                  />
                 </div>
               </div>
             </motion.div>

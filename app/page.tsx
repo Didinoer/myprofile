@@ -91,7 +91,7 @@ export default function Home() {
               />
             </div>
             <div
-              className="mt-4 text-[7px] font-pixel text-[#6B6090] animate-blink"
+              className="mt-4 text-[10px] font-pixel text-[#6B6090] animate-blink"
               style={{ fontFamily: "'Press Start 2P', monospace" }}
             >
               Press START to begin
@@ -123,7 +123,7 @@ export default function Home() {
                 KONAMI CODE!
               </div>
               <div
-                className="text-[9px] font-pixel text-[#AA66CC]"
+                className="text-[10px] font-pixel text-[#AA66CC]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 🏆 Secret Achievement Unlocked:<br />
@@ -172,19 +172,19 @@ export default function Home() {
           }}
         >
           <div
-            className="text-[8px] font-pixel text-[var(--text-muted)] mb-2"
+            className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             © 2025 Didi Nurahman
           </div>
           <div
-            className="text-[7px] font-pixel text-[var(--text-muted)]"
+            className="text-[10px] font-pixel text-[var(--text-muted)]"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             Crafted with ❤️ + ⚔️ + ☕
           </div>
           <div
-            className="mt-2 text-[6px] font-pixel text-[var(--text-muted)] opacity-50"
+            className="mt-2 text-[10px] font-pixel text-[var(--text-muted)] opacity-50"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             🕹️ Try the Konami Code for a surprise!

@@ -9,33 +9,32 @@ export const profile = {
   location: "Indonesia",
   education: "Bachelor of Informatics Engineering",
   currentPosition: "Fullstack Developer & System Analyst",
-  avatar: "/images/avatar.png",
+  avatar: "/images/avatar3.png",
   resume: "/resume.pdf",
 
   bio: `Hi there, I'm Didi Nurahman — a passionate Fullstack Developer and System Analyst with a knack for building powerful, elegant solutions. From crafting seamless web experiences to engineering robust ERP integrations, I love turning complex problems into clean, maintainable code.`,
 
-  bioExtended: `With deep expertise across the full stack — PHP, Laravel, Node.js, React, ERPNext — and a systems-level mindset, I bridge the gap between business needs and technical solutions. Every project is a new adventure waiting to be conquered.`,
+  bioExtended: `With deep expertise across the full stack — PHP, Laravel, Node.js, React, ERPNext — and a systems-level mindset, I bridge the gap between business needs and technical solutions. I'm highly interested in leveraging AI to accelerate development workflows and integrate AI assistance into my daily work routines to deliver solutions faster and more efficiently.`,
 
-  interests: ["Open Source", "ERP Systems", "Web Automation", "UI/UX Design", "System Architecture"],
+  interests: ["Open Source", "ERP Systems", "AI in Workflows", "Web Automation", "UI/UX Design", "System Architecture"],
 
   careerGoal: "To build scalable, impactful systems that solve real-world business problems — one elegant line of code at a time.",
 
   contact: {
-    email: "didi.nurahman@email.com",
+    email: "didinoer98@gmail.com",
     instagram: "https://instagram.com/didi_noer72",
     instagramHandle: "@didi_noer72",
-    facebook: "https://facebook.com/nurahman.didi",
-    facebookName: "nurahman didi",
-    github: "https://github.com/didi-nurahman",
-    linkedin: "https://linkedin.com/in/didi-nurahman",
-    whatsapp: "https://wa.me/62",
+    facebook: "https://www.facebook.com/didi.nurahman.5/",
+    facebookName: "Nurahman Didi",
+    github: "https://github.com/Didinoer",
+    linkedin: "https://www.linkedin.com/in/didi-nurahman-6207aa1a4/",
+    whatsapp: "https://wa.me/6285880317725",
   },
 
   stats: {
-    yearsExperience: 5,
+    yearsExperience: 2,
     projectsCompleted: 30,
-    happyClients: 20,
-    erpImplementations: 8,
+    erpImplementations: 2,
     certifications: 4,
   },
 };

@@ -10,6 +10,7 @@ export interface Project {
   tech: string[];
   category: ProjectCategory;
   thumbnail: string;
+  images?: string[];
   demoUrl?: string;
   sourceUrl?: string;
   status: "Completed" | "In Progress" | "Maintained";
@@ -29,17 +30,18 @@ export const projects: Project[] = [
   {
     id: "virtual-tryon",
     title: "Virtual Try-On",
-    description: "AI-powered virtual clothing try-on system using computer vision and AR.",
+    description: "Combines clothing body models and fabric patterns using Google's AI visual prediction model.",
     longDescription:
-      "A cutting-edge virtual try-on application that uses machine learning and augmented reality to let customers see how clothes look on them without physically trying them on. Integrates with e-commerce platforms for seamless shopping experience.",
-    tech: ["Python", "OpenCV", "React", "Node.js", "REST API", "Docker"],
+      "An innovative project that combines clothing body models and fabric patterns into a single matching unit. This system utilizes Google's advanced visual prediction model (Google AI model) to generate realistic virtual try-on simulations in real-time.",
+    tech: ["Next Js", "Node.js", "REST API", "Docker"],
     category: "Web Development",
-    thumbnail: "/images/hero_village.png",
+    thumbnail: "/images/tryon1.png",
+    images: ["/images/tryon1.png", "/images/tryon2.png"],
     demoUrl: "#",
     sourceUrl: "#",
     status: "Completed",
     difficulty: "Legendary",
-    year: 2024,
+    year: 2025,
   },
   {
     id: "company-profile",
@@ -47,14 +49,15 @@ export const projects: Project[] = [
     description: "Modern, responsive company profile website with CMS and SEO optimization.",
     longDescription:
       "A fully responsive company profile website built for a mid-sized enterprise. Features dynamic content management, multi-language support, blog system, service showcase, and contact management with email integration.",
-    tech: ["Laravel", "MySQL", "JavaScript", "CSS", "Tailwind", "Blade"],
+    tech: ["Laravel", "MySQL", "JavaScript", "CSS", "Tailwind", "Blade", "Node js", "AI", "Next Js", "React Js", "Vue Js", "Rest API", "PHP"],
     category: "Web Development",
-    thumbnail: "/images/character_house.png",
-    demoUrl: "#",
+    thumbnail: "/images/image3.png",
+    images: ["/images/image1.png", "/images/image2.png", "/images/image3.png", "/images/image4.png", "/images/image5.png", "/images/image6.png"],
+    demoUrl: "https://adipragata.com",
     sourceUrl: "#",
     status: "Completed",
     difficulty: "Medium",
-    year: 2023,
+    year: 2026,
   },
   {
     id: "erpnext-implementation",
@@ -64,7 +67,8 @@ export const projects: Project[] = [
       "End-to-end ERPNext implementation for a manufacturing company. Includes custom doctypes for production tracking, custom reports for financial analysis, user training, data migration from legacy systems, and ongoing maintenance.",
     tech: ["ERPNext", "Frappe", "Python", "JavaScript", "MariaDB", "Linux"],
     category: "ERP Systems",
-    thumbnail: "/images/hall_of_fame.png",
+    thumbnail: "/images/image-erp1 (1).png",
+    images: ["/images/image-erp1 (1).png", "/images/image-erp1 (2).png", "/images/image-erp1 (3).png"],
     demoUrl: "#",
     sourceUrl: "#",
     status: "Maintained",
@@ -79,7 +83,7 @@ export const projects: Project[] = [
       "Developed a robust integration layer between internal ERP systems and Indonesia's Ceisa 4.0 customs declaration platform. Handles automated document submission, status tracking, real-time sync, and error handling for seamless customs compliance.",
     tech: ["Node.js", "REST API", "ERPNext", "Frappe", "MySQL", "Docker"],
     category: "Integration",
-    thumbnail: "/images/quest_board.png",
+    thumbnail: "/images/image-ceisa.png",
     demoUrl: "#",
     sourceUrl: "#",
     status: "Completed",
@@ -92,9 +96,9 @@ export const projects: Project[] = [
     description: "Scalable, distributed web scraping platform with data pipeline and dashboard.",
     longDescription:
       "A powerful web scraping engine built to collect, process, and store large volumes of data from multiple sources. Features scheduling, proxy rotation, CAPTCHA handling, real-time monitoring dashboard, and automated data export to various formats.",
-    tech: ["Python", "Scrapy", "Selenium", "PostgreSQL", "Redis", "Docker"],
+    tech: ["Python", "Scrapy", "Selenium", "BeautifulSoup", "Puppeteer", "Playwright", "Json", "Csv"],
     category: "Automation",
-    thumbnail: "/images/adventure_journal.png",
+    thumbnail: "/images/image-scrapping.png",
     demoUrl: "#",
     sourceUrl: "#",
     status: "Completed",

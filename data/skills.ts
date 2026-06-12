@@ -50,18 +50,19 @@ export const skills: Skill[] = [
 export const skillCategories: SkillCategory[] = ["Backend", "ERP", "Frontend", "Database", "DevOps"];
 
 export const techInventory = [
-  { name: "Laravel", icon: "🔴", description: "Elegant PHP web framework for artisans", rarity: "Epic" },
-  { name: "ERPNext", icon: "⚙️", description: "Open-source ERP system for growing businesses", rarity: "Legendary" },
-  { name: "MySQL", icon: "🐬", description: "World's most popular relational database", rarity: "Rare" },
-  { name: "React", icon: "⚛️", description: "JavaScript library for building user interfaces", rarity: "Epic" },
-  { name: "Docker", icon: "🐳", description: "Containerization platform for apps", rarity: "Rare" },
-  { name: "Git", icon: "🌿", description: "Distributed version control system", rarity: "Common" },
-  { name: "Linux", icon: "🐧", description: "Open-source operating system kernel", rarity: "Rare" },
-  { name: "Node.js", icon: "🟢", description: "JavaScript runtime built on Chrome's V8", rarity: "Epic" },
-  { name: "Frappe", icon: "🏗️", description: "Full-stack web framework powering ERPNext", rarity: "Legendary" },
-  { name: "Python", icon: "🐍", description: "High-level, general-purpose programming language", rarity: "Rare" },
-  { name: "REST API", icon: "🔗", description: "Architecture for distributed hypermedia systems", rarity: "Common" },
-  { name: "PostgreSQL", icon: "🐘", description: "Advanced open-source relational database", rarity: "Rare" },
+  { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg", description: "Elegant PHP web framework for artisans", rarity: "Epic" },
+  { name: "ERPNext", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>', description: "Open-source ERP system for growing businesses", rarity: "Legendary" },
+  { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg", description: "World's most popular relational database", rarity: "Rare" },
+  { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", description: "JavaScript library for building user interfaces", rarity: "Epic" },
+  { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", description: "The React framework for the web", rarity: "Epic" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg", description: "Containerization platform for apps", rarity: "Rare" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg", description: "Distributed version control system", rarity: "Common" },
+  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg", description: "Open-source operating system kernel", rarity: "Rare" },
+  { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg", description: "JavaScript runtime built on Chrome's V8", rarity: "Epic" },
+  { name: "Frappe", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>', description: "Full-stack web framework powering ERPNext", rarity: "Legendary" },
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", description: "High-level, general-purpose programming language", rarity: "Rare" },
+  { name: "REST API", icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#9B9B9B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>', description: "Architecture for distributed hypermedia systems", rarity: "Common" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg", description: "Advanced open-source relational database", rarity: "Rare" },
 ];
 
 export type ItemRarity = "Common" | "Rare" | "Epic" | "Legendary";

@@ -73,7 +73,6 @@ export default function AchievementsSection() {
           {[
             { label: "Years of\nExp", value: profile.stats.yearsExperience, icon: "⏰", suffix: "+" },
             { label: "Projects\nDone", value: profile.stats.projectsCompleted, icon: "✅", suffix: "+" },
-            { label: "Happy\nClients", value: profile.stats.happyClients, icon: "😊", suffix: "+" },
             { label: "ERP\nDeploys", value: profile.stats.erpImplementations, icon: "⚙️", suffix: "" },
             { label: "Certifi-\ncations", value: profile.stats.certifications, icon: "📜", suffix: "" },
           ].map(({ label, value, icon, suffix }) => (
@@ -96,7 +95,7 @@ export default function AchievementsSection() {
                 <AnimatedCounter target={value} suffix={suffix} />
               </div>
               <div
-                className="text-[6px] font-pixel text-[var(--text-muted)] whitespace-pre-line leading-relaxed"
+                className="text-[10px] font-pixel text-[var(--text-muted)] whitespace-pre-line leading-relaxed"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 {label}
@@ -108,7 +107,7 @@ export default function AchievementsSection() {
         {/* Achievement badges */}
         <div className="mb-12">
           <div
-            className="text-[8px] font-pixel text-[var(--text-muted)] mb-4 text-center"
+            className="text-[10px] font-pixel text-[var(--text-muted)] mb-4 text-center"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             ── ACHIEVEMENT BADGES ──
@@ -133,13 +132,13 @@ export default function AchievementsSection() {
                   {ach.icon}
                 </div>
                 <div
-                  className="text-[7px] font-pixel text-[var(--accent-secondary)] mb-1 leading-relaxed"
+                  className="text-[10px] font-pixel text-[var(--accent-secondary)] mb-1 leading-relaxed"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   {ach.title}
                 </div>
                 <div
-                  className="text-[8px] text-[var(--text-muted)]"
+                  className="text-[10px] text-[var(--text-muted)]"
                   style={{ fontFamily: "'Nunito', sans-serif" }}
                 >
                   {ach.description}
@@ -160,13 +159,13 @@ export default function AchievementsSection() {
             }}
           >
             <span
-              className="text-[8px] font-pixel text-[#AA66CC]"
+              className="text-[10px] font-pixel text-[#AA66CC]"
               style={{ fontFamily: "'Press Start 2P', monospace" }}
             >
               🎒 Technology Inventory
             </span>
             <span
-              className="text-[7px] font-pixel text-[#6B6090]"
+              className="text-[10px] font-pixel text-[#6B6090]"
               style={{ fontFamily: "'Press Start 2P', monospace" }}
             >
               {techInventory.length}/{techInventory.length} items
@@ -200,7 +199,7 @@ export default function AchievementsSection() {
                   <div key={r} className="flex items-center gap-1">
                     <div className="w-2 h-2" style={{ background: colors[r] }} />
                     <span
-                      className="text-[6px] font-pixel"
+                      className="text-[10px] font-pixel"
                       style={{ fontFamily: "'Press Start 2P', monospace", color: colors[r] }}
                     >
                       {r}

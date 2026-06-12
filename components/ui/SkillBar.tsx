@@ -55,19 +55,19 @@ export default function SkillBar({
         <div className="flex items-center justify-between mb-1">
           <span
             className="text-xs font-pixel text-[var(--text-primary)] truncate"
-            style={{ fontFamily: "'Press Start 2P', monospace", fontSize: "8px" }}
+            style={{ fontFamily: "'Press Start 2P', monospace", fontSize: "10px" }}
           >
             {name}
           </span>
           <div className="flex items-center gap-2 flex-shrink-0 ml-2">
             <span
-              className="text-[7px] font-pixel text-[var(--text-muted)]"
+              className="text-[10px] font-pixel text-[var(--text-muted)]"
               style={{ fontFamily: "'Press Start 2P', monospace" }}
             >
               Lv.{level}
             </span>
             <span
-              className="text-[7px] font-pixel"
+              className="text-[10px] font-pixel"
               style={{ color, fontFamily: "'Press Start 2P', monospace" }}
             >
               {xp}%

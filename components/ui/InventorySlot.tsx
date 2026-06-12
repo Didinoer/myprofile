@@ -21,6 +21,9 @@ export default function InventorySlot({
   const [hovered, setHovered] = useState(false);
   const rarityColor = rarityColors[rarity];
 
+  const isUrl = icon.startsWith("http") || icon.startsWith("/");
+  const isSvg = icon.trim().startsWith("<svg");
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -32,14 +35,29 @@ export default function InventorySlot({
     >
       {/* Slot */}
       <div
-        className="inventory-slot w-16 h-16 md:w-20 md:h-20 flex flex-col items-center justify-center gap-1"
+        className="inventory-slot w-16 h-16 md:w-20 md:h-20 flex flex-col items-center justify-center gap-1 p-1"
         style={{ borderColor: hovered ? rarityColor : undefined }}
       >
-        <span className="text-2xl md:text-3xl" style={{ imageRendering: "pixelated" }}>
-          {icon}
-        </span>
+        <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center relative">
+          {isSvg ? (
+            <div 
+              className="w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full"
+              dangerouslySetInnerHTML={{ __html: icon }} 
+            />
+          ) : isUrl ? (
+            <img
+              src={icon}
+              alt={name}
+              className="w-full h-full object-contain"
+            />
+          ) : (
+            <span className="text-2xl md:text-3xl" style={{ imageRendering: "pixelated" }}>
+              {icon}
+            </span>
+          )}
+        </div>
         <span
-          className="text-[6px] font-pixel text-center leading-none"
+          className="text-[10px] font-pixel text-center leading-none mt-1"
           style={{
             fontFamily: "'Press Start 2P', monospace",
             color: rarityColor,
@@ -65,19 +83,19 @@ export default function InventorySlot({
               style={{ borderColor: rarityColor }}
             >
               <div
-                className="text-[8px] font-pixel mb-1"
+                className="text-[10px] font-pixel mb-1"
                 style={{ fontFamily: "'Press Start 2P', monospace", color: rarityColor }}
               >
                 {name}
               </div>
               <div
-                className="text-[8px] text-[#A89EC0] leading-tight"
+                className="text-[10px] text-[#A89EC0] leading-tight"
                 style={{ fontFamily: "'Nunito', sans-serif", fontSize: "10px" }}
               >
                 {description}
               </div>
               <div
-                className="mt-1 text-[7px] font-pixel"
+                className="mt-1 text-[10px] font-pixel"
                 style={{ fontFamily: "'Press Start 2P', monospace", color: rarityColor, opacity: 0.8 }}
               >
                 [{rarity}]

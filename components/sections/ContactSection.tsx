@@ -1,6 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import SectionTitle from "@/components/ui/SectionTitle";
 import PixelButton from "@/components/ui/PixelButton";
@@ -17,6 +17,19 @@ export default function ContactSection() {
   const [form, setForm] = useState<FormState>({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errors, setErrors] = useState<Partial<FormState>>({});
+  const [copied, setCopied] = useState(false);
+
+  const mailtoSubject = encodeURIComponent("Quest Inquiry / Collaboration");
+  const mailtoBody = encodeURIComponent("Hi Didi,\n\nI visited your portfolio and would love to get in touch regarding...");
+  const mailtoUrl = `mailto:${profile.contact.email}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    // Copy email to clipboard
+    navigator.clipboard.writeText(profile.contact.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    });
+  };
 
   const validate = () => {
     const e: Partial<FormState> = {};
@@ -28,12 +41,18 @@ export default function ContactSection() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setStatus("sending");
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1500));
+
+    const subject = encodeURIComponent(form.subject);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
+    );
+
+    window.location.href = `mailto:${profile.contact.email}?subject=${subject}&body=${body}`;
+    
     setStatus("sent");
     setForm({ name: "", email: "", subject: "", message: "" });
   };
@@ -95,7 +114,7 @@ export default function ContactSection() {
               }}
             >
               <span
-                className="text-[8px] font-pixel text-white"
+                className="text-[10px] font-pixel text-white"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 📮 SOCIAL LINKS
@@ -134,7 +153,7 @@ export default function ContactSection() {
                   </div>
                   <div className="min-w-0">
                     <div
-                      className="text-[7px] font-pixel text-[var(--text-muted)] mb-0.5"
+                      className="text-[10px] font-pixel text-[var(--text-muted)] mb-0.5"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                     >
                       {link.label}
@@ -165,7 +184,7 @@ export default function ContactSection() {
               >
                 <div className="text-5xl mb-2" style={{ imageRendering: "pixelated" }}>📫</div>
                 <p
-                  className="text-[7px] font-pixel text-[var(--text-muted)]"
+                  className="text-[10px] font-pixel text-[var(--text-muted)]"
                   style={{ fontFamily: "'Press Start 2P', monospace", lineHeight: 2 }}
                 >
                   Responses within<br />24 hours!
@@ -193,18 +212,25 @@ export default function ContactSection() {
               }}
             >
               <div className="mb-6">
-                <div
-                  className="text-[8px] font-pixel text-[var(--text-muted)] mb-1"
-                  style={{ fontFamily: "'Press Start 2P', monospace" }}
+                <a
+                  href={mailtoUrl}
+                  onClick={handleEmailClick}
+                  className="inline-block group hover:opacity-85 transition-opacity"
+                  title="Click to send email / copy to clipboard"
                 >
-                  To: Didi Nurahman
-                </div>
-                <div
-                  className="text-[7px] font-pixel text-[var(--text-muted)]"
-                  style={{ fontFamily: "'Press Start 2P', monospace" }}
-                >
-                  📍 The Village, Indonesia
-                </div>
+                  <div
+                    className="text-[10px] font-pixel text-[var(--text-muted)] mb-1 group-hover:text-[var(--accent-secondary)] transition-colors"
+                    style={{ fontFamily: "'Press Start 2P', monospace" }}
+                  >
+                    To: Didi Nurahman ✉️
+                  </div>
+                  <div
+                    className="text-[10px] font-pixel text-[var(--text-muted)] group-hover:text-[var(--accent-secondary)] transition-colors"
+                    style={{ fontFamily: "'Press Start 2P', monospace" }}
+                  >
+                    📍 The Village, Indonesia
+                  </div>
+                </a>
               </div>
 
               {status === "sent" ? (
@@ -215,7 +241,7 @@ export default function ContactSection() {
                 >
                   <div className="text-6xl mb-4" style={{ imageRendering: "pixelated" }}>📨</div>
                   <div
-                    className="text-[9px] font-pixel text-[var(--accent-primary)] mb-2"
+                    className="text-[10px] font-pixel text-[var(--accent-primary)] mb-2"
                     style={{ fontFamily: "'Press Start 2P', monospace" }}
                   >
                     Message Sent!
@@ -228,7 +254,7 @@ export default function ContactSection() {
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-4 text-[7px] font-pixel text-[var(--accent-secondary)] underline"
+                    className="mt-4 text-[10px] font-pixel text-[var(--accent-secondary)] underline"
                     style={{ fontFamily: "'Press Start 2P', monospace", background: "none", border: "none", cursor: "pointer" }}
                   >
                     Send another
@@ -241,7 +267,7 @@ export default function ContactSection() {
                     {(["name", "email"] as const).map((field) => (
                       <div key={field}>
                         <label
-                          className="block text-[7px] font-pixel text-[var(--text-muted)] mb-1"
+                          className="block text-[10px] font-pixel text-[var(--text-muted)] mb-1"
                           style={{ fontFamily: "'Press Start 2P', monospace" }}
                           htmlFor={`contact-${field}`}
                         >
@@ -264,7 +290,7 @@ export default function ContactSection() {
                         />
                         {errors[field] && (
                           <p
-                            className="text-[6px] font-pixel text-red-400 mt-1"
+                            className="text-[10px] font-pixel text-red-400 mt-1"
                             style={{ fontFamily: "'Press Start 2P', monospace" }}
                           >
                             ⚠ {errors[field]}
@@ -277,7 +303,7 @@ export default function ContactSection() {
                   {/* Subject */}
                   <div>
                     <label
-                      className="block text-[7px] font-pixel text-[var(--text-muted)] mb-1"
+                      className="block text-[10px] font-pixel text-[var(--text-muted)] mb-1"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                       htmlFor="contact-subject"
                     >
@@ -298,7 +324,7 @@ export default function ContactSection() {
                       placeholder="Quest title..."
                     />
                     {errors.subject && (
-                      <p className="text-[6px] font-pixel text-red-400 mt-1" style={{ fontFamily: "'Press Start 2P', monospace" }}>
+                      <p className="text-[10px] font-pixel text-red-400 mt-1" style={{ fontFamily: "'Press Start 2P', monospace" }}>
                         ⚠ {errors.subject}
                       </p>
                     )}
@@ -307,7 +333,7 @@ export default function ContactSection() {
                   {/* Message */}
                   <div>
                     <label
-                      className="block text-[7px] font-pixel text-[var(--text-muted)] mb-1"
+                      className="block text-[10px] font-pixel text-[var(--text-muted)] mb-1"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                       htmlFor="contact-message"
                     >
@@ -328,7 +354,7 @@ export default function ContactSection() {
                       placeholder="Write your quest here..."
                     />
                     {errors.message && (
-                      <p className="text-[6px] font-pixel text-red-400 mt-1" style={{ fontFamily: "'Press Start 2P', monospace" }}>
+                      <p className="text-[10px] font-pixel text-red-400 mt-1" style={{ fontFamily: "'Press Start 2P', monospace" }}>
                         ⚠ {errors.message}
                       </p>
                     )}
@@ -350,6 +376,36 @@ export default function ContactSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* Toast Notification */}
+      <AnimatePresence>
+        {copied && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="fixed bottom-6 right-6 z-50 p-4"
+            style={{
+              background: "var(--panel-bg)",
+              border: "4px solid var(--border-dark)",
+              boxShadow: "6px 6px 0 var(--shadow-color)",
+            }}
+          >
+            <div
+              className="text-[10px] font-pixel text-[#00C851]"
+              style={{ fontFamily: "'Press Start 2P', monospace" }}
+            >
+              📋 Email Copied!
+            </div>
+            <div
+              className="text-xs text-[var(--text-secondary)] mt-1"
+              style={{ fontFamily: "'Nunito', sans-serif" }}
+            >
+              {profile.contact.email}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

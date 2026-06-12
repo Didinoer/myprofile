@@ -84,8 +84,8 @@ const jsonLd = {
   url: "https://didi-nurahman.dev",
   sameAs: [
     "https://instagram.com/didi_noer72",
-    "https://facebook.com/nurahman.didi",
-    "https://github.com/didi-nurahman",
+    "https://www.facebook.com/didi.nurahman.5",
+    "https://github.com/Didinoer",
     "https://linkedin.com/in/didi-nurahman",
   ],
   knowsAbout: ["PHP", "Laravel", "ERPNext", "React", "Next.js", "System Analysis", "Docker", "MySQL"],

@@ -81,7 +81,7 @@ export default function CompanionCharacter() {
               style={{ boxShadow: "3px 3px 0 var(--shadow-color)" }}
             >
               <p
-                className="text-[8px] text-[var(--text-primary)] leading-tight"
+                className="text-[10px] text-[var(--text-primary)] leading-tight"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 {message}

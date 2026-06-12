@@ -286,7 +286,7 @@ section {
 /* Responsive pixel text scaling */
 @media (max-width: 768px) {
   .font-pixel {
-    font-size: 0.6em;
+    font-size: max(10px, 0.6em);
   }
 }
 

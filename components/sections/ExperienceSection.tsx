@@ -88,7 +88,7 @@ export default function ExperienceSection() {
                     <div className="flex items-start justify-between gap-2 mb-3">
                       <div>
                         <h3
-                          className="text-[9px] font-pixel text-[var(--text-primary)] mb-1 leading-relaxed"
+                          className="text-[10px] font-pixel text-[var(--text-primary)] mb-1 leading-relaxed"
                           style={{ fontFamily: "'Press Start 2P', monospace" }}
                         >
                           {exp.position}
@@ -102,7 +102,7 @@ export default function ExperienceSection() {
                       </div>
                       <div className="flex-shrink-0 text-right">
                         <div
-                          className="text-[7px] font-pixel px-2 py-1"
+                          className="text-[10px] font-pixel px-2 py-1"
                           style={{
                             fontFamily: "'Press Start 2P', monospace",
                             background: "var(--accent-secondary)",
@@ -114,7 +114,7 @@ export default function ExperienceSection() {
                           {exp.startDate}–{exp.endDate}
                         </div>
                         <div
-                          className="text-[6px] font-pixel text-[var(--text-muted)] mt-1"
+                          className="text-[10px] font-pixel text-[var(--text-muted)] mt-1"
                           style={{ fontFamily: "'Press Start 2P', monospace" }}
                         >
                           {exp.type}
@@ -124,7 +124,7 @@ export default function ExperienceSection() {
 
                     {/* Location */}
                     <div
-                      className="text-[7px] font-pixel text-[var(--text-muted)] mb-3"
+                      className="text-[10px] font-pixel text-[var(--text-muted)] mb-3"
                       style={{ fontFamily: "'Press Start 2P', monospace" }}
                     >
                       📍 {exp.location}
@@ -133,13 +133,13 @@ export default function ExperienceSection() {
                     {/* Responsibilities */}
                     <div className="mb-3">
                       <div
-                        className="text-[6px] font-pixel text-[var(--text-muted)] mb-2"
+                        className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
                         style={{ fontFamily: "'Press Start 2P', monospace" }}
                       >
                         ── QUEST LOG ──
                       </div>
                       <ul className="space-y-1">
-                        {exp.responsibilities.slice(0, 3).map((r, ri) => (
+                        {exp.responsibilities.map((r, ri) => (
                           <li
                             key={ri}
                             className="text-xs text-[var(--text-secondary)] flex items-start gap-2"
@@ -151,27 +151,27 @@ export default function ExperienceSection() {
                         ))}
                       </ul>
                     </div>
-
-                    {/* Achievements */}
-                    <div className="mb-3">
-                      <div
-                        className="text-[6px] font-pixel text-[var(--text-muted)] mb-2"
-                        style={{ fontFamily: "'Press Start 2P', monospace" }}
-                      >
-                        ── ACHIEVEMENTS ──
-                      </div>
-                      <ul className="space-y-1">
-                        {exp.achievements.slice(0, 2).map((a, ai) => (
-                          <li
-                            key={ai}
-                            className="text-xs text-[var(--text-secondary)] flex items-start gap-2"
-                            style={{ fontFamily: "'Nunito', sans-serif" }}
-                          >
-                            <span className="text-yellow-400 flex-shrink-0">⭐</span>
-                            {a}
-                          </li>
-                        ))}
-                      </ul>
+ 
+                     {/* Achievements */}
+                     <div className="mb-3">
+                       <div
+                         className="text-[10px] font-pixel text-[var(--text-muted)] mb-2"
+                         style={{ fontFamily: "'Press Start 2P', monospace" }}
+                       >
+                         ── ACHIEVEMENTS ──
+                       </div>
+                       <ul className="space-y-1">
+                         {exp.achievements.map((a, ai) => (
+                           <li
+                             key={ai}
+                             className="text-xs text-[var(--text-secondary)] flex items-start gap-2"
+                             style={{ fontFamily: "'Nunito', sans-serif" }}
+                           >
+                             <span className="text-yellow-400 flex-shrink-0">⭐</span>
+                             {a}
+                           </li>
+                         ))}
+                       </ul>
                     </div>
 
                     {/* Tech used */}
@@ -179,7 +179,7 @@ export default function ExperienceSection() {
                       {exp.tech.map((t) => (
                         <span
                           key={t}
-                          className="text-[6px] font-pixel px-1 py-0.5"
+                          className="text-[10px] font-pixel px-1 py-0.5"
                           style={{
                             fontFamily: "'Press Start 2P', monospace",
                             background: "#1A1A2E",
@@ -213,7 +213,7 @@ export default function ExperienceSection() {
               }}
             >
               <span
-                className="text-[8px] font-pixel text-[#2C1810]"
+                className="text-[10px] font-pixel text-[#2C1810]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 🌟 Adventure Continues...

@@ -22,7 +22,7 @@ export default function SectionTitle({ icon, title, subtitle, location }: Sectio
         <div className="inline-flex items-center gap-2 mb-4">
           <div className="h-[2px] w-8 bg-[var(--border-color)]" />
           <span
-            className="text-[8px] font-pixel text-[var(--text-muted)] tracking-widest"
+            className="text-[10px] font-pixel text-[var(--text-muted)] tracking-widest"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             📍 {location}

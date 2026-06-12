@@ -229,7 +229,7 @@ export default function HeroSection() {
                 }}
               >
                 <span
-                  className="text-[7px] font-pixel text-[#2C1810]"
+                  className="text-[10px] font-pixel text-[#2C1810]"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   Lv99
@@ -239,13 +239,13 @@ export default function HeroSection() {
               {/* HP/SP bars */}
               <div className="mt-4 space-y-1 w-40 md:w-56">
                 <div className="flex items-center gap-2">
-                  <span className="text-[7px] font-pixel text-red-400 w-4" style={{ fontFamily: "'Press Start 2P', monospace" }}>HP</span>
+                  <span className="text-[10px] font-pixel text-red-400 w-4" style={{ fontFamily: "'Press Start 2P', monospace" }}>HP</span>
                   <div className="flex-1 xp-bar-container">
                     <div className="xp-bar-fill" style={{ width: "100%", background: "linear-gradient(90deg, #FF4444, #FF6666)" }} />
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[7px] font-pixel text-blue-400 w-4" style={{ fontFamily: "'Press Start 2P', monospace" }}>MP</span>
+                  <span className="text-[10px] font-pixel text-blue-400 w-4" style={{ fontFamily: "'Press Start 2P', monospace" }}>MP</span>
                   <div className="flex-1 xp-bar-container">
                     <div className="xp-bar-fill" style={{ width: "88%", background: "linear-gradient(90deg, #3388FF, #55AAFF)" }} />
                   </div>
@@ -265,7 +265,7 @@ export default function HeroSection() {
             >
               <div className="h-[3px] w-6 bg-[var(--accent-secondary)]" />
               <span
-                className="text-[8px] font-pixel text-[var(--accent-secondary)]"
+                className="text-[10px] font-pixel text-[var(--accent-secondary)]"
                 style={{ fontFamily: "'Press Start 2P', monospace" }}
               >
                 ✨ PLAYER ONE
@@ -361,7 +361,7 @@ export default function HeroSection() {
                 className="mt-8 flex items-center gap-2 justify-center lg:justify-start"
               >
                 <span
-                  className="text-[7px] font-pixel text-white/60 animate-blink"
+                  className="text-[10px] font-pixel text-white/60 animate-blink"
                   style={{ fontFamily: "'Press Start 2P', monospace" }}
                 >
                   ▼ scroll to explore
@@ -386,7 +386,7 @@ export default function HeroSection() {
           }}
         >
           <p
-            className="text-[9px] font-pixel text-[#2C1810]"
+            className="text-[10px] font-pixel text-[#2C1810]"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             🏆 Achievement Unlocked: Tree Whisperer!

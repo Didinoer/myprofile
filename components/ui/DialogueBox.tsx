@@ -68,7 +68,7 @@ export default function DialogueBox({
         <div className="flex items-center gap-2 mb-3 pb-2 border-b-2 border-[var(--border-color)]">
           <span className="text-lg">{speakerIcon}</span>
           <span
-            className="font-pixel text-[9px] text-[var(--accent-secondary)]"
+            className="font-pixel text-[10px] text-[var(--accent-secondary)]"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             {speakerName}
@@ -87,7 +87,7 @@ export default function DialogueBox({
       {isComplete && (
         <div className="flex justify-end mt-2">
           <span
-            className="text-[8px] font-pixel text-[var(--text-muted)] animate-bounce-pixel"
+            className="text-[10px] font-pixel text-[var(--text-muted)] animate-bounce-pixel"
             style={{ fontFamily: "'Press Start 2P', monospace" }}
           >
             ▼ next
