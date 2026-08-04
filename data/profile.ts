@@ -10,7 +10,7 @@ export const profile = {
   education: "Bachelor of Informatics Engineering",
   currentPosition: "Fullstack Developer & System Analyst",
   avatar: "/images/avatar3.png",
-  resume: "/resume.pdf",
+  resume: "/assets/Didi-Nurahman-CV.pdf",
 
   bio: `Hi there, I'm Didi Nurahman — a passionate Fullstack Developer and System Analyst with a knack for building powerful, elegant solutions. From crafting seamless web experiences to engineering robust ERP integrations, I love turning complex problems into clean, maintainable code.`,
 

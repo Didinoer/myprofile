@@ -343,8 +343,11 @@ export default function HeroSection() {
               <PixelButton href="#portfolio" variant="primary" size="md">
                 📜 View Portfolio
               </PixelButton>
-              <PixelButton href={profile.resume} variant="secondary" size="md">
+              <PixelButton href={profile.resume} download="Didi-Nurahman-CV.pdf" variant="secondary" size="md">
                 📄 Download CV
+              </PixelButton>
+              <PixelButton href={profile.contact.github} variant="ghost" size="md">
+                🐙 GitHub
               </PixelButton>
               <PixelButton href="#contact" variant="ghost" size="md">
                 ✉️ Contact Me

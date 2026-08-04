@@ -7,6 +7,7 @@ interface PixelButtonProps {
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   href?: string;
+  download?: boolean | string;
   variant?: "primary" | "secondary" | "danger" | "ghost";
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -32,6 +33,7 @@ export default function PixelButton({
   children,
   onClick,
   href,
+  download,
   variant = "primary",
   size = "md",
   className = "",
@@ -52,6 +54,7 @@ export default function PixelButton({
     return (
       <motion.a
         href={href}
+        download={download}
         className={baseClass}
         whileHover={disabled ? {} : { scale: 1.02 }}
         whileTap={disabled ? {} : { x: 2, y: 2, boxShadow: "none" }}

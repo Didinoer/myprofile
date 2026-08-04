@@ -63,6 +63,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true },
   },
+  icons: {
+    icon: "/images/avatar3.png",
+    shortcut: "/images/avatar3.png",
+    apple: "/images/avatar3.png",
+  },
 };
 
 export const viewport: Viewport = {

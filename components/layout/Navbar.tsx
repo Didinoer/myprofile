@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "./DayNightProvider";
+import { profile } from "@/data/profile";
 
 const NAV_LINKS = [
   { id: "hero", label: "Home", icon: "🏠", location: "Village Entrance" },
@@ -110,6 +111,21 @@ export default function Navbar() {
 
           {/* Controls */}
           <div className="flex items-center gap-3">
+            {/* GitHub Redirect Button */}
+            <a
+              href={profile.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 border-2 border-[var(--border-dark)] bg-[var(--panel-bg)] text-[10px] font-pixel text-[var(--text-primary)] hover:bg-[var(--bg-secondary)] transition-all"
+              style={{
+                boxShadow: "2px 2px 0 var(--shadow-color)",
+                fontFamily: "'Press Start 2P', monospace",
+              }}
+              title="GitHub Profile"
+            >
+              🐙 GitHub
+            </a>
+
             {/* Day/Night Toggle */}
             <motion.button
               onClick={toggleTheme}
