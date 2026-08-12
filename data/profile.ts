@@ -27,7 +27,7 @@ export const profile = {
     facebook: "https://www.facebook.com/didi.nurahman.5/",
     facebookName: "Nurahman Didi",
     github: "https://github.com/Didinoer",
-    linkedin: "https://www.linkedin.com/in/didi-nurahman-6207aa1a4/",
+    linkedin: "https://www.linkedin.com/in/didi-nurahman/",
     whatsapp: "https://wa.me/6285880317725",
   },
 
