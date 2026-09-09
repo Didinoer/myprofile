@@ -349,6 +349,9 @@ export default function HeroSection() {
               <PixelButton href={profile.contact.github} variant="ghost" size="md">
                 🐙 GitHub
               </PixelButton>
+              <PixelButton href={profile.contact.linkedin} variant="ghost" size="md">
+                💼 LinkedIn
+              </PixelButton>
               <PixelButton href="#contact" variant="ghost" size="md">
                 ✉️ Contact Me
               </PixelButton>
