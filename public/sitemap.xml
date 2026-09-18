@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ✅ MAIN HOMEPAGE -->
+  <url>
+    <loc>https://didi-nurahman.dev/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/hero_village.png</image:loc>
+      <image:caption>Gaming theme hero village background</image:caption>
+      <image:title>Didi's Gaming Portfolio Hero</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/avatar3.png</image:loc>
+      <image:caption>Professional profile avatar</image:caption>
+      <image:title>Didi Nurahman Avatar</image:title>
+    </image:image>
+  </url>
+
+  <!-- ✅ MAIN SECTIONS -->
+  <url>
+    <loc>https://didi-nurahman.dev/#about</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/about_section_bg.jpg</image:loc>
+      <image:caption>About section background</image:caption>
+      <image:title>About Didi Nurahman</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/#skills</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/skills_bg.png</image:loc>
+      <image:caption>Technical skills showcase</image:caption>
+      <image:title>Didi's Technical Skills</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/#portfolio</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/portfolio_bg.jpg</image:loc>
+      <image:caption>Portfolio projects showcase</image:caption>
+      <image:title>Didi's Portfolio Projects</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/#experience</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/experience_bg.jpg</image:loc>
+      <image:caption>Professional experience timeline</image:caption>
+      <image:title>Didi's Work Experience</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/#achievements</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/achievements_bg.jpg</image:loc>
+      <image:caption>Gaming-style achievements showcase</image:caption>
+      <image:title>Didi's Achievements</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/#contact</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://didi-nurahman.dev/images/contact_bg.jpg</image:loc>
+      <image:caption>Contact section background</image:caption>
+      <image:title>Contact Didi Nurahman</image:title>
+    </image:image>
+  </url>
+
+  <!-- ✅ ASSET URLs -->
+  <url>
+    <loc>https://didi-nurahman.dev/assets/Didi-Nurahman-CV.pdf</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ✅ SOCIAL MEDIA PROFILE LINKS (Optional for search engines) -->
+  <url>
+    <loc>https://github.com/Didinoer</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://linkedin.com/in/didi-nurahman</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://instagram.com/didi_noer72</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://wa.me/6285880317725</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ✅ GAMING ENHANCEMENT URLs -->
+  <url>
+    <loc>https://didi-nurahman.dev/achievements</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://didi-nurahman.dev/konami</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

@@ -67,6 +67,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 64px;
+  /* ✅ NEW - Improved text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -181,7 +184,7 @@ body {
 .pixel-btn--primary {
   background: linear-gradient(145deg, var(--accent-primary), #45A049);
   color: white;
-  border: 2px solid #2E7D32;
+  border: 2px solid #2E7D31;
 }
 
 .pixel-btn--primary:hover {
@@ -225,49 +228,68 @@ body {
   z-index: 1;
 }
 
-/* Pixel image rendering */
+/* ✅ IMPROVED - Pixel image rendering */
 img.pixel-art {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+  /* ✅ NEW - Better image quality */
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
 }
 
-/* Custom scrollbar */
+/* ✅ ENHANCED - Custom scrollbar with accessibility */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 16px; /* ✅ Increased for better usability */
 }
 
 ::-webkit-scrollbar-track {
   background: var(--bg-secondary);
-  border-left: 2px solid var(--border-color);
+  border-left: 3px solid var(--border-color);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--border-dark);
   border: 2px solid var(--border-color);
   image-rendering: pixelated;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-primary);
+  box-shadow: 0 0 4px var(--glow-color);
+}
+
+::-webkit-scrollbar-thumb:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
 }
 
 /* Section transitions */
 section {
   transition: background-color 0.5s ease;
+  /* ✅ IMPROVED - Better scroll behavior */
+  scroll-margin-top: 80px;
 }
 
-/* Floating particles */
+/* ✅ OPTIMIZED - Floating particles */
 @keyframes particle-float {
-  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  0% { 
+    transform: translateY(100vh) rotate(0deg); 
+    opacity: 0; 
+  }
   10% { opacity: 1; }
   90% { opacity: 1; }
-  100% { transform: translateY(-20px) rotate(360deg); opacity: 0; }
+  100% { 
+    transform: translateY(-20px) rotate(360deg); 
+    opacity: 0; 
+  }
 }
 
 .particle {
   position: fixed;
-  width: 4px;
-  height: 4px;
+  width: 3px; /* ✅ Smaller for performance */
+  height: 3px;
   background: var(--particle-color);
   animation: particle-float linear infinite;
   image-rendering: pixelated;
@@ -275,29 +297,31 @@ section {
   z-index: 0;
 }
 
-/* RPG dialog box */
+/* ✅ ENHANCED - RPG dialog box */
 .dialog-box {
   background: var(--panel-bg);
-  border: 4px solid var(--panel-border);
-  box-shadow: 6px 6px 0 var(--shadow-color), inset 1px 1px 0 rgba(255,255,255,0.4);
+  border: 3px solid var(--panel-border);
+  box-shadow: 4px 4px 0 var(--shadow-color), inset 1px 1px 0 rgba(255,255,255,0.4);
   position: relative;
+  border-radius: 4px; /* ✅ SMOOTH - Added border radius */
 }
 
 .dialog-box::before {
   content: '';
   position: absolute;
-  inset: 3px;
+  inset: 2px; /* ✅ Reduced for balance */
   border: 1px solid rgba(255,255,255,0.2);
   pointer-events: none;
 }
 
-/* XP Bar */
+/* ✅ IMPROVED - XP Bar */
 .xp-bar-container {
   background: #2a2a2a;
   border: 2px solid #555;
-  height: 16px;
+  height: 18px; /* ✅ Increased for better visibility */
   box-shadow: inset 2px 2px 0 rgba(0,0,0,0.5);
   image-rendering: pixelated;
+  border-radius: 3px;
 }
 
 .xp-bar-fill {
@@ -306,70 +330,125 @@ section {
   background: linear-gradient(90deg, #00C851 0%, #00E65C 50%, #00C851 100%);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
   image-rendering: pixelated;
+  border-radius: 1px;
 }
 
-/* Achievement badge glow */
+/* ✅ ENHANCED - Achievement badge glow */
 .badge-unlock {
   animation: badge-pulse 2s ease-in-out infinite;
 }
 
 @keyframes badge-pulse {
-  0%, 100% { filter: brightness(1) drop-shadow(0 0 4px rgba(255,215,0,0.4)); }
-  50% { filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,215,0,0.8)); }
+  0%, 100% { 
+    filter: brightness(1) drop-shadow(0 0 4px rgba(255,215,0,0.4)); 
+  }
+  50% { 
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255,215,0,0.8)); 
+  }
 }
 
-/* Inventory slot */
+/* ✅ IMPROVED - Inventory slot with better accessibility */
 .inventory-slot {
-  background: #1a1a2e;
-  border: 3px solid #3d3060;
+  background: var(--bg-secondary);
+  border: 3px solid var(--border-color);
   box-shadow: inset 2px 2px 0 rgba(0,0,0,0.5), 2px 2px 0 rgba(0,0,0,0.4);
   position: relative;
-  transition: all 0.15s steps(3);
+  transition: all 0.15s ease;
   cursor: pointer;
+  min-height: 60px; /* ✅ Touch-friendly size */
+  min-width: 60px; /* ✅ Touch-friendly size */
+  border-radius: 4px; /* ✅ SMOOTH - Added border radius */
 }
 
 .inventory-slot:hover {
-  border-color: #FFD700;
+  border-color: var(--accent-secondary);
   box-shadow: inset 2px 2px 0 rgba(0,0,0,0.5), 2px 2px 0 rgba(0,0,0,0.4), 0 0 8px rgba(255,215,0,0.5);
   transform: translate(-2px, -2px);
 }
 
-/* Timeline dot */
+.inventory-slot:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ✅ ENHANCED - Timeline dot */
 .timeline-dot {
-  width: 16px;
-  height: 16px;
+  width: 18px; /* ✅ Increased for better visibility */
+  height: 18px;
   background: var(--accent-secondary);
   border: 3px solid var(--border-dark);
   box-shadow: 0 0 8px var(--glow-color);
   image-rendering: pixelated;
+  border-radius: 50%; /* ✅ SMOOTH - Made circular */
+  transition: transform 0.2s ease;
 }
 
-/* Selection glow for quest cards */
+.timeline-dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 12px var(--glow-color);
+}
+
+/* ✅ IMPROVED - Selection glow for quest cards */
 .quest-card {
-  transition: all 0.2s steps(4);
+  transition: all 0.2s ease;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 .quest-card:hover {
   transform: translate(-4px, -4px);
   box-shadow: 8px 8px 0 rgba(0,0,0,0.5), 0 0 12px var(--glow-color) !important;
+  background: rgba(255,255,255,0.03);
 }
 
-/* Hero text glow */
+.quest-card:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ✅ ENHANCED - Hero text glow */
 .text-glow {
-  text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+  text-shadow: 
+    0 0 10px var(--glow-color), 
+    0 0 20px var(--glow-color),
+    2px 2px 0 var(--shadow-color); /* ✅ Added pixel-style shadow */
 }
 
-/* Typewriter cursor */
+/* ✅ IMPROVED - Typewriter cursor */
 .typewriter-cursor::after {
   content: '▮';
   animation: blink 1s step-end infinite;
   color: var(--accent-primary);
+  font-weight: bold;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* ✅ ENHANCED - Responsive pixel text scaling */
+@media (max-width: 768px) {
+  .font-pixel {
+    font-size: clamp(9px, 0.65em, 12px); /* ✅ Better responsive scaling */
+    line-height: 1.6;
+  }
+  
+  .pixel-btn {
+    padding: 10px 18px; /* ✅ Better mobile touch targets */
+    font-size: 10px;
+  }
+  
+  .pixel-border {
+    border-width: 2px; /* ✅ Thinner on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .font-pixel {
+    font-size: clamp(8px, 0.6em, 11px);
+  }
 }
 
 /* ✅ NEW - High contrast mode support */
@@ -396,6 +475,43 @@ section {
   .inventory-slot,
   .timeline-dot {
     border-width: 4px;
+  }
+}
+
+/* Smooth section dividers */
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+/* ✅ IMPROVED - Loading shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 2px;
+}
+
+/* ✅ ENHANCED - Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .particle {
+    animation: none; /* ✅ Disable particles for reduced motion */
+  }
+  
+  .scanlines::after {
+    display: none; /* ✅ Disable scanlines for reduced motion */
   }
 }
 
@@ -429,36 +545,26 @@ section {
   top: 6px;
 }
 
-/* Smooth section dividers */
-.wave-divider {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-/* Loading shimmer */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer {
-  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
+/* ✅ NEW - Better loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-panel) 50%, var(--bg-secondary) 75%);
   background-size: 200% 100%;
-  animation: shimmer 2s infinite;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
 }
 
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+/* ✅ NEW - Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
-}
-
-/* Focus styles */
-:focus-visible {
-  outline: 3px solid var(--accent-primary);
-  outline-offset: 2px;
+  
+  .scanlines::after,
+  .particle,
+  .pixel-btn {
+    display: none !important;
+  }
 }

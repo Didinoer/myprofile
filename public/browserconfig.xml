@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square150x150logo src="/images/icon-150x150.png"/>
+      <wide310x150logo src="/images/icon-wide-310x150.png"/>
+      <square310x310logo src="/images/icon-310x310.png"/>
+      <TileColor>#6ABF5E</TileColor>
+      <BadgeLogoImage src="/images/tile-badge.png"/>
+      <TileImage src="/images/tile-background.png"/>
+    </tile>
+    <notification>
+      <polling-uri src="https://notifications.didi-nurahman.dev/api/check"/>
+      <frequency>30</frequency>
+      <cycle>1</cycle>
+    </notification>
+    <tile>
+      <square70x70logo src="/images/icon-70x70.png" sizes="70x70"/>
+      <square150x150logo src="/images/icon-150x150.png" sizes="150x150"/>
+      <wide310x150logo src="/images/icon-wide-310x150.png" sizes="310x150"/>
+      <square310x310logo src="/images/icon-310x310.png" sizes="310x310"/>
+    </tile>
+  </msapplication>
+</browserconfig>

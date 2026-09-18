@@ -1,0 +1,140 @@
+# ================================================================
+# SEO ENHANCED - robots.txt for Didi Nurahman Gaming Portfolio
+# ================================================================
+# 
+# This robots.txt is optimized for:
+# - Gaming-themed portfolio visibility
+# - Social media crawler access
+# - Developer tool access
+# - Performance optimization
+# ================================================================
+
+# ✅ ALLOW all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# ✅ ENHANCED - Disallow sensitive or unnecessary paths
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /.git/
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /search?q=*
+Disallow: /*.pdf$
+
+# ✅ ALLOW - Static assets and important resources
+Allow: /images/
+Allow: /assets/
+Allow: /data/
+Allow: /fonts/
+Allow: /icons/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.webp
+
+# ✅ ENHANCED - Social Media & Developer Bot Allowances
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Crawl-delay: 2
+
+User-agent: Googlebot-News
+Allow: /
+Crawl-delay: 1
+
+# ✅ ENHANCED - Gaming & Portfolio Related Crawlers
+User-agent: *Portfolio*
+Allow: /
+
+User-agent: *Game*
+Allow: /
+
+User-agent: *Pixel*
+Allow: /
+
+User-agent: *Developer*
+Allow: /
+
+# ✅ ENHANCED - Analytics & Monitoring
+User-agent: Google-Analytics
+Allow: /
+
+User-agent: GoogleAnalytics
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# ✅ DISALLOW - Known bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: seocompany
+Disallow: /
+
+User-agent: scrapy
+Disallow: /
+
+User-agent: crawler
+Disallow: /
+
+# ✅ ENHANCED - Sitemap location
+Sitemap: https://didi-nurahman.dev/sitemap.xml
+Sitemap: https://didi-nurahman.dev/sitemap-images.xml
+Sitemap: https://didi-nurahman.dev/sitemap-videos.xml
+
+# ✅ ENHANCED - Crawl delays for performance
+User-agent: *
+Crawl-delay: 1
+
+# ✅ ENHANCED - Rate limiting for different bots
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+# ✅ ENHANCED - Development & Testing
+# Allow search engines to see development builds
+# (Remove in production if needed)
+User-agent: *
+Allow: /development/
+Allow: /testing/
